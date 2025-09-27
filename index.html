@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="container">
+        <div id="display"></div>
+        <div id="keys">
+  <div>AC</div>
+  <div>DEL</div>
+  <div>%</div>
+  <div>+</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>-</div>
+  <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>*</div>
+    <div>3</div>
+    <div>2</div>    
+    <div>1</div>
+    <div>/</div>
+    <div>.</div>
+    <div>0</div>
+    <div>=</div>
+    </div>
+    
+    </section>
+</body>
+<script>
+    let keys=document.querySelectorAll("#keys>div");
+    let bag="";
+    for(let i=0;i<keys.length;i++){
+     keys[i].addEventListener("click",mycalculator);
+    }
+    function mycalculator(){
+        let targetnumber=event.target.innerText;
+if(targetnumber=="AC"){
+    bag="";
+document.querySelector("#display").innerText=bag;
+}
+else if(targetnumber=="DEL"){
+    let displaytext=document.querySelector("#display").innerText;
+    document.querySelector("#display").innerText=displaytext.slice(0,-1);
+}
+else if(targetnumber=="="){
+    document.querySelector("#display").innerText=eval(bag);
+}
+else{
+   bag=bag+targetnumber;
+   document.querySelector("#display").innerText=bag; 
+
+}
+    }
+
+    </script>
+</html>

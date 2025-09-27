@@ -1,0 +1,30 @@
+#container{
+    width: 350px;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 100px;
+    padding:30px;
+
+}
+#display{
+    height: 120px;
+    width: 100%;
+    border:2px solid black;
+    display: flex;
+    align-items:end;
+    justify-content: flex-end;
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,80px);
+   gap: 10px;
+ margin-top: 30px;
+}
+#keys>div{
+   border:2px solid black;
+   display: grid;
+   align-items: center;
+   justify-content: center;
+
+}
